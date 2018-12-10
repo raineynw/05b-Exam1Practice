@@ -3,8 +3,8 @@ PRACTICE Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Valerie Galluzzi, Mark Hays, Amanda Stouder, Aaron Wilkin,
-         their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues, and Nelson Rainey.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -103,7 +103,7 @@ def problem2a(circle, rectangle, window):
       :type window:    rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -111,6 +111,22 @@ def problem2a(circle, rectangle, window):
     #    DIFFICULTY:      6
     #    TIME ESTIMATE:   10 to 15 minutes.
     # -------------------------------------------------------------------------
+
+    jim = circle
+    bob = rectangle
+    window.render()
+    jim.attach_to(window)
+    bob.attach_to(window)
+    #window.continue_on_mouse_click()
+
+    nelson = rg.Line(bob.get_upper_right_corner(),bob.get_lower_left_corner())
+    nelson.arrow = 'last'
+    window.render()
+    nelson.attach_to(window)
+   #window.continue_on_mouse_click()
+
+    jim.fill_color = bob.outline_color
+    window.render()
 
 def run_test_problem2b():
     """ Tests the  problem2b   function. """
@@ -182,6 +198,10 @@ def problem2b(rect, n, delta, win):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 25 minutes.
     # -------------------------------------------------------------------------
+    for k in range(n):
+        rico = rect
+
+
 
 
 # -----------------------------------------------------------------------------
